@@ -28,24 +28,28 @@ var is_subscribed = [
     'true',
     'true',
     'false',
-    'true',
+    'false',
 ];
 
-for(var i = 1; i <= age.length; i++) {
+var user = 1;
+
+for(var i = 0; i < age.length; i++) {
 
     if(age[i] < 18 && is_subscribed[i] == 'false') {
-        console.log("User " + i + " is younger than 18 and is not subscribed.");
+        console.log("User " + user + " is younger than 18 and is not subscribed.");
     }
 
     else if(age[i] < 18 && is_subscribed[i] == 'true') {
-        console.log("User " + i + " is younger than 18 and is subscribed.");
+        console.log("User " + user + " is younger than 18 and is subscribed.");
     }
 
     else if(age[i] >= 18 && is_subscribed[i] == 'false') {
-        console.log("User " + i + " is at least 18 and is not subscribed.");
+        console.log("User " + user + " is at least 18 and is not subscribed.");
     }
 
     else {
-        console.log("User " + i + " is at least 18 and is subscribed.");
+        console.log("User " + user + " is at least 18 and is subscribed.");
     }
+
+    user++;
 }
